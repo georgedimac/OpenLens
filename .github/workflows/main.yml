@@ -42,6 +42,7 @@ jobs:
 
       - name: Build Lens
         run: |
+          sudo -H pip install setuptools
           npm run all:install
           # Avoid npm install from electron-builder
           # ref: https://github.com/electron-userland/electron-builder/blob/80a3ae857b9305aff1774e1b2b932601af50231b/packages/app-builder-lib/src/util/yarn.ts#L11-L16
