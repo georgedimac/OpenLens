@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Export version to variable
-        run: echo "LENS_VERSION=$(cat version)" >> $GITHUB_ENV
+        run: echo "LENS_VERSION=master" >> $GITHUB_ENV
         shell: bash
 
       - uses: actions/setup-node@v3
@@ -34,7 +34,7 @@ jobs:
         with:
           repository: lensapp/lens
           path: lens
-          ref: v${{ env.LENS_VERSION }}
+          ref: master
           fetch-depth: 1
 
       - name: Patch Upstream Lens
